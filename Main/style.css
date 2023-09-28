@@ -52,3 +52,26 @@ header a {
     margin: 150px 35px 0 0;
     padding: 5px;
 }
+
+
+/* left section */
+aside {
+    padding: 5%;
+    color: rgba(39, 0, 94, 0.805);
+    float: left;
+}
+
+.about-section {
+    padding: 0 20% 110% 0;
+    border-right: 3px solid rgb(226, 43, 80)
+}
+
+.work-section {
+    padding: 0 20% 150% 0;
+    border-right: 3px solid rgb(226, 43, 80)
+}
+
+.contact-section {
+    padding: 0 20% 150% 0;
+    border-right: 3px solid rgb(226, 43, 80)
+}
