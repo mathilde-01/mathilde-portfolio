@@ -75,3 +75,44 @@ aside {
     padding: 0 20% 150% 0;
     border-right: 3px solid rgb(226, 43, 80)
 }
+
+
+ /* main section */
+ main {
+    width: 75%;
+    display: block;
+    float: right;
+}
+
+main section {
+    margin: 0;
+    padding: 30px;
+    height: 150px;
+    color: rgb(226, 43, 80);
+}
+
+
+.box1 {
+    float: center;
+    width: 20%;  
+    padding: 30px;
+    background-color: rgb(252, 216, 222);
+  
+  }
+
+.box2 {
+    float: right;
+    width: 20%;  
+    padding: 30px;
+    background-color: rgb(252, 216, 222);;
+  }
+
+ 
+
+.contact a {
+    margin-right: 3%;
+    color: rgba(13, 0, 31, 0.805);
+    text-decoration: none;
+    border-bottom: 3px solid rgba(13, 0, 31, 0.805);
+}
+
