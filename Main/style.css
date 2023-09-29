@@ -1,118 +1,216 @@
 * {
     margin: 0;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-family: Andale Mono, monospace;
+}
+/* Color theme */
+
+:root {
+    --outer-space: rgba(20, 74, 141, 0.805);
+    --bright-space:  rgba(0, 42, 94, 0.356);
+    --bright-pink: rgb(252, 216, 222);
+    --bloody-orange: rgb(218, 36, 90);
 }
 
+    /* set content highlight color and background  */
+::selection {
+    background-color: var(--outer-space);
+    color: var(--bright-pink);
+  }
+  
 
 
 /* header styling */
 header {
-    padding: 3%;
+    padding: 1%;
     display: flex;
-    background-color: rgba(13, 0, 31, 0.805);
-    opacity: 0.5;
+    background-color: var(--bright-space);
+    z-index: 100;
+    position: relative;
+
 }
 
 header .mathilde {
-color: rgba(11, 0, 31, 0.805);
-background-color: rgb(252, 216, 222);
-padding: 0 10px 0 60px;
+color: var(--outer-space);
+background-color: var(--bright-pink);
+padding: 0 5px 0 70px;
 }
 
 header nav {
-    margin: 0 0 0 30%;
+    margin: 0 0 0 50%;
     float: right;
     font-size: 20px;
 }
 
 header a {
-    padding: 0 10px 0 10px;
+    padding: 0 20px 0 20px;
     display: inline-block;
-    color: rgb(252, 216, 222);
+    color: var(--bright-pink);
     text-decoration: none;
-    border-bottom: 3px solid rgb(252, 216, 222);
+    border-bottom: 3px solid var(--bright-pink);
     height: 90%;
+}
+
+/* Nav smooth scroll */
+html {
+  scroll-behavior: smooth;
 }
 
 /* banner image  */
 .hero {
-    height: 200px;
+    height: 350px;
     width: 100%;
     margin-bottom: 25px;
     background-image: url("./images/banner.jpg");
     background-size: cover;
     background-position: center;
-    color: rgba(13, 0, 31, 0.805);
+    color: var(--outer-space);
+    position: relative;
+    top: -80px;
 }
 
 .hero h3 {
-    display: inline-block;
-    background-color: rgb(252, 216, 222);
+    background-color: var(--bright-pink);
     float: right;
-    margin: 150px 35px 0 0;
-    padding: 5px;
+    margin: 250px 150px 0 0;
+    padding: 0 5px 0 50px;
 }
 
 
 /* left section */
 aside {
     padding: 5%;
-    color: rgba(39, 0, 94, 0.805);
+    color: var(--outer-space);
     float: left;
 }
 
 .about-section {
-    padding: 0 20% 110% 0;
-    border-right: 3px solid rgb(226, 43, 80)
+    padding: 0 0 0 70%;
+    white-space: nowrap;
+
 }
 
 .work-section {
-    padding: 0 20% 150% 0;
-    border-right: 3px solid rgb(226, 43, 80)
+    padding: 300% 0 0 115%;
+
 }
 
 .contact-section {
-    padding: 0 20% 150% 0;
-    border-right: 3px solid rgb(226, 43, 80)
+    padding: 300% 0 0 90%;
+   
 }
 
 
  /* main section */
  main {
     width: 75%;
-    display: block;
-    float: right;
+    margin: 0 20%;
+   
 }
 
 main section {
     margin: 0;
-    padding: 30px;
+    padding: 70px 150px;
     height: 150px;
-    color: rgb(226, 43, 80);
+    color: var(--bloody-orange);
+    border-left: 3px solid var(--outer-space);
+
+}
+
+#work {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 20%;
+}
+
+.box {
+    min-width: 35%;
+    margin: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100%;
+    padding: 2rem;
+    
 }
 
 
 .box1 {
-    float: center;
-    width: 20%;  
+   display: flex;
+   flex-direction: row;
+    width: 100%;  
+    height: 150%;
     padding: 30px;
-    background-color: rgb(252, 216, 222);
+    background-color: var(--bright-pink);
   
   }
 
+/* placeholder image 
+  .box1 img {
+    
+  }
+  */
+
 .box2 {
-    float: right;
-    width: 20%;  
+    display: flex;
+    flex-direction: row;
+    width: 39%;  
     padding: 30px;
-    background-color: rgb(252, 216, 222);;
+    background-color: var(--bright-pink);
   }
 
+  .box3 {
+    display: flex;
+    flex-direction: row;
+    width: 39%;  
+    padding: 30px;
+    background-color: var(--bright-pink);
+  
+  }
+
+/* placeholder image 
+.box2 img {
+   
+}
+*/
+
+.box:hover {
+  background-color: var(--bloody-orange);
+  border: 2px solid var(--outer-space);
+  box-shadow: 5px 10px 20px var(--bright-space);
+  color: var(--bright-pink);
+}
  
 
-.contact a {
-    margin-right: 3%;
-    color: rgba(13, 0, 31, 0.805);
+  .contact {
+    margin-top: 15%;
+  }
+  
+  .contact a {
+    margin-right: 2%;
+    color: var(--outer-space);
     text-decoration: none;
-    border-bottom: 3px solid rgba(13, 0, 31, 0.805);
+    border-bottom: 3px solid var(--outer-space);
 }
 
+
+
+/* media queries */
+
+  @media screen and (max-width: 992px) {
+    section {
+      width: 50%;
+    }
+    }
+
+
+  @media screen and (max-width: 768px) {
+  .box {
+    flex: 0 0 50%;
+    max-width: 50%;
+
+    header,
+    main {
+       flex-direction: column;
+  }
+  }
+}
