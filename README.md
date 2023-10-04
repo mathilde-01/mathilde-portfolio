@@ -1,4 +1,6 @@
 # mathilde-portfolio
+[Link to deplyed application](https://mathilde-01.github.io/mathilde-portfolio/)  
+![Portfolio screenshot](https://mathilde-01.github.io/mathilde-portfolio/)  
 
 ## Description  
 This porfolio will showcase deployed web applications learned throughout the Penn LPS Coding bootcamp.
