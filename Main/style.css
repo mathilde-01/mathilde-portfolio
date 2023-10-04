@@ -21,33 +21,51 @@
 
 /* header styling */
 header {
-    padding: 1%;
+    padding: 0%;
     display: flex;
     background-color: var(--bright-space);
     z-index: 100;
     position: relative;
-
 }
 
 header .mathilde {
 color: var(--outer-space);
 background-color: var(--bright-pink);
-padding: 0 5px 0 70px;
+float: left;
+padding: 10px 10px 0 90px;
+margin: 0%;
+
 }
 
-header nav {
+.nav {
     margin: 0 0 0 50%;
     float: right;
     font-size: 20px;
+    line-height: 60px;
 }
 
-header a {
+.menu a {
+    clear: right;
     padding: 0 20px 0 20px;
+    margin-left: 30px;
     display: inline-block;
     color: var(--bright-pink);
     text-decoration: none;
-    border-bottom: 3px solid var(--bright-pink);
-    height: 90%;
+    border-bottom: 2px solid var(--bright-pink);
+    line-height: 60px;
+}
+
+label {
+  margin: 0 40% 0 0;
+  font-size: 26px;
+  line-height: 60px;
+  display: none;
+  width: 26px;
+  float: right;
+}
+
+#toggle {
+  display: none;
 }
 
 /* Nav smooth scroll */
@@ -71,7 +89,7 @@ html {
 .hero h3 {
     background-color: var(--bright-pink);
     float: right;
-    margin: 250px 150px 0 0;
+    margin: 250px 250px 0 0;
     padding: 0 5px 0 50px;
 }
 
@@ -95,7 +113,7 @@ aside {
 }
 
 .contact-section {
-    padding: 300% 0 0 90%;
+    padding: 380% 0 0 90%;
    
 }
 
@@ -104,113 +122,154 @@ aside {
  main {
     width: 75%;
     margin: 0 20%;
-   
+    border-left: 3px solid var(--outer-space);
 }
 
 main section {
     margin: 0;
-    padding: 70px 150px;
+    padding: 50px 150px;
     height: 150px;
     color: var(--bloody-orange);
-    border-left: 3px solid var(--outer-space);
-
 }
 
-#work {
-    display: flex;
-    flex-wrap: wrap;
-    padding-bottom: 20%;
+/* about me section */
+.about-me img {
+  height: 70%;
+  float: left;
+  margin-right: 25px;
+}
+
+/* work section */
+.work {
+  margin-bottom: 30%;
 }
 
 .box {
-    min-width: 35%;
-    margin: 2%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    min-height: 100%;
-    padding: 2rem;
-    
+  position: relative;
+  margin: 1%;
+  background-color: var(--bright-pink);
 }
 
-
-.box1 {
-   display: flex;
-   flex-direction: row;
-    width: 100%;  
-    height: 150%;
-    padding: 30px;
-    background-color: var(--bright-pink);
-  
+.box h3 {
+  position: absolute;
+  top: 50%;
+  left: 40%;
   }
 
-/* placeholder image 
-  .box1 img {
-    
+  .box1 {
+    display: flex;
+    padding: 0%;
   }
-  */
+
+.box2 h3 {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+}
+
+.box3 h3 {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+} 
+
 
 .box2 {
-    display: flex;
-    flex-direction: row;
-    width: 39%;  
-    padding: 30px;
-    background-color: var(--bright-pink);
+  display: flex;
+  float: left;
+    width: 47%;  
   }
 
-  .box3 {
+.box3 {
     display: flex;
-    flex-direction: row;
-    width: 39%;  
-    padding: 30px;
-    background-color: var(--bright-pink);
-  
+    float: right;
+    width: 47%;  
   }
 
-/* placeholder image 
-.box2 img {
-   
-}
-*/
+.box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover
+  }
+
 
 .box:hover {
   background-color: var(--bloody-orange);
   border: 2px solid var(--outer-space);
   box-shadow: 5px 10px 20px var(--bright-space);
-  color: var(--bright-pink);
+  color: var(--outer-space);
 }
  
 
-  .contact {
-    margin-top: 15%;
-  }
-  
+
+/*Contact section*/
+
   .contact a {
     margin-right: 2%;
     color: var(--outer-space);
     text-decoration: none;
-    border-bottom: 3px solid var(--outer-space);
+    border-bottom: 1px solid var(--outer-space);
 }
 
 
 
-/* media queries */
+/* media queries */   
 
-  @media screen and (max-width: 992px) {
-    section {
-      width: 50%;
-    }
-    }
-
-
-  @media screen and (max-width: 768px) {
-  .box {
-    flex: 0 0 50%;
-    max-width: 50%;
-
-    header,
-    main {
-       flex-direction: column;
-  }
-  }
+/*Nav menu*/
+ @media screen and (max-width: 600px) {
+label {
+  display: block;
+  cursor: pointer;
+  float: right;
 }
+.menu {
+  text-align: center;
+  width: 100%;
+  display: none;
+}
+.menu a {
+  display: block;
+  border-bottom: 2px solid var(--bright-pink);
+  margin: 0%;
+
+ }
+
+ #toggle:checked + .menu {
+  display:block
+ }
+
+/* header */
+header a {
+  border-bottom: none;
+}
+
+.hero h3 {
+  float: center;
+  margin: 250px 200px 0 0;
+  padding: 0 20px 0 20px;
+}
+
+/* main section */
+aside {
+  display: none;
+}
+
+main {
+ border-width: 0px;
+ margin: 0, 10%;
+
+}
+main section {
+  padding: 0;
+  height: 200px;
+  width: 400px;
+}
+
+.work {
+  padding-top: 100px;
+}
+
+.contact {
+  padding-top: 150px;
+}
+ }
